@@ -1,0 +1,150 @@
+.take-evaluation {
+  max-width: 720px;
+  margin: 0 auto;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.eval-header {
+  margin-bottom: 24px;
+}
+
+.eval-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+.progress-bar {
+  height: 8px;
+  border-radius: 4px;
+}
+
+.question-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.q-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.q-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+}
+
+.q-points {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+.q-text {
+  font-size: 17px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.option-btn {
+  text-align: left;
+  padding: 14px 18px;
+  border-radius: 12px;
+  text-transform: none;
+  font-size: 15px;
+  justify-content: flex-start;
+}
+
+.option-btn mat-icon {
+  margin-right: 12px;
+  color: #666;
+}
+
+.option-btn.selected {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.08);
+  color: #667eea;
+}
+
+.option-btn.selected mat-icon {
+  color: #667eea;
+}
+
+.text-answer {
+  margin-bottom: 24px;
+}
+
+.paragraph {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.submit-btn mat-icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 48px;
+  color: #666;
+}
+
+.loading-state .spin {
+  animation: spin 1s linear infinite;
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  color: #667eea;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }

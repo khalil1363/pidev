@@ -1,0 +1,71 @@
+<div class="evaluation-form">
+  <div class="page-header">
+    <div class="header-content">
+      <button mat-icon-button (click)="cancel()" class="back-btn">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <div>
+        <h1>{{ id ? 'Edit Evaluation' : 'New Evaluation' }}</h1>
+        <p class="header-subtitle">{{ id ? 'Update evaluation details' : 'Set title, dates, duration and attempts' }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-card" *ngIf="!loading">
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" placeholder="e.g. Math Quiz 1">
+        <mat-error>Title is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Image URL (optional)</mat-label>
+        <input matInput formControlName="imageUrl" placeholder="https://...">
+      </mat-form-field>
+
+      <div class="row">
+        <mat-form-field appearance="outline" class="half">
+          <mat-label>Start date & time</mat-label>
+          <input matInput type="datetime-local" formControlName="dateStart">
+          <mat-error>Required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="half">
+          <mat-label>End date & time (deadline)</mat-label>
+          <input matInput type="datetime-local" formControlName="dateEnd">
+          <mat-error>Required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+        <mat-form-field appearance="outline" class="third">
+          <mat-label>Duration (minutes)</mat-label>
+          <input matInput type="number" formControlName="durationMinutes" min="1">
+          <mat-error>Min 1</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="third">
+          <mat-label>Number of attempts</mat-label>
+          <input matInput type="number" formControlName="numberOfAttempts" min="1">
+          <mat-error>Min 1</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="third">
+          <mat-label>Total score</mat-label>
+          <input matInput type="number" formControlName="totalScore" min="0">
+          <mat-error>Min 0</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-actions">
+        <button mat-stroked-button type="button" (click)="cancel()">Cancel</button>
+        <button mat-raised-button class="primary-btn" type="submit" [disabled]="saving">
+          {{ saving ? 'Saving...' : (id ? 'Update' : 'Create & Add Questions') }}
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="loading-state" *ngIf="loading">
+    <mat-icon class="spin">refresh</mat-icon>
+    <p>Loading...</p>
+  </div>
+</div>

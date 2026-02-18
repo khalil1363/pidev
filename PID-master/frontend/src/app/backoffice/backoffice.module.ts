@@ -8,6 +8,10 @@ import { UserManagementComponent } from './user-management/user-management.compo
 import { CoursesManagementComponent } from './courses-management/courses-management.component';
 import { ClubsManagementComponent } from './clubs-management/clubs-management.component';
 import { LayoutComponent } from './layout/layout.component';
+import { EvaluationsManagementComponent } from './evaluations-management/evaluations-management.component';
+import { EvaluationFormComponent } from './evaluation-form/evaluation-form.component';
+import { EvaluationQuestionsComponent } from './evaluation-questions/evaluation-questions.component';
+import { EvaluationAttemptsComponent } from './evaluation-attempts/evaluation-attempts.component';
 import { SharedModule } from '../shared/shared.module';
 
 // Angular Material Modules
@@ -27,7 +31,11 @@ import { MatSelectModule } from '@angular/material/select';
     UserManagementComponent,
     CoursesManagementComponent,
     ClubsManagementComponent,
-    LayoutComponent
+    LayoutComponent,
+    EvaluationsManagementComponent,
+    EvaluationFormComponent,
+    EvaluationQuestionsComponent,
+    EvaluationAttemptsComponent
   ],
   imports: [
     CommonModule,

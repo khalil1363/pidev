@@ -33,7 +33,10 @@
       <div class="user-info">
         <span class="username">{{ username }}</span>
         <div class="avatar">
-          <img [src]="userAvatar || 'https://via.placeholder.com/40x40'" [alt]="username">
+          <img
+            [src]="userAvatar || avatarPlaceholder"
+            [alt]="username"
+            (error)="$event.target && ($any($event.target).src = avatarPlaceholder)">
         </div>
       </div>
       <mat-icon class="dropdown-icon">arrow_drop_down</mat-icon>

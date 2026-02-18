@@ -8,6 +8,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { CoursesComponent } from './courses/courses.component';
 import { ChatComponent } from './chat/chat.component';
 import { LayoutComponent } from './layout/layout.component';
+import { EvaluationsListComponent } from './evaluations-list/evaluations-list.component';
+import { TakeEvaluationComponent } from './take-evaluation/take-evaluation.component';
+import { EvaluationResultsComponent } from './evaluation-results/evaluation-results.component';
 import { SharedModule } from '../shared/shared.module';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
@@ -18,7 +21,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     ProfileComponent,
     CoursesComponent,
     ChatComponent,
-    LayoutComponent
+    LayoutComponent,
+    EvaluationsListComponent,
+    TakeEvaluationComponent,
+    EvaluationResultsComponent
   ],
   imports: [
     CommonModule,
